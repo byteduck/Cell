@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style type="text/css">
+		<style>
 			body{
 				font-family: "Trebuchet MS", Helvetica, sans-serif;
 				padding: 0;
 				margin: 0;
-				background: url("{src}/hexagons.jpg");
+				background: url('{$src}hexagons.jpg');
 				color: white;
 			}
 			h1{
 				font-weight: light;
 			}
+			
 			.topbar{
 				height: 20px;
 				width: 100%;
 				background-color: gray;
 				font-size: 20px;
 			}
+			
+			.subbar{
+				height: 10px;
+				width: 100%;
+				background-color: gray;
+				font-size: 10px;
+			}
+			
 			.topbar a{
+				color: white;
+			}
+			
+			.subbar a{
 				color: white;
 			}
 		</style>
@@ -26,7 +39,10 @@
 	<body>
 		<div class="topbar"><center>
 			<a href="info.html">Home</a>&nbsp;&nbsp;&nbsp;
-			<a href="more_info.html">More info</a>
+			<a href="provseu.html">Prokaryotes vs Eukaryotes</a>
+		</center></div>
+		<div class="subbar"><center>
+			<a href="evolve.html">How Eukaryotes Happened</a>
 		</center></div>
 		<center><h1>{Insert Science Project Here}</h1></center>
 	</body>

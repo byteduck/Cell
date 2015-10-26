@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.URL;
 import java.util.Scanner;
 
 import javax.swing.JButton;
@@ -23,6 +24,7 @@ import javax.swing.UIManager;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
 import javax.swing.text.DefaultCaret;
+import javax.swing.text.html.StyleSheet;
 
 import com.jogamp.newt.Display;
 
@@ -102,7 +104,8 @@ public class Main {
 			while (s.hasNext()) {
 				paneBuilder.append(s.nextLine() + "\n");
 			}
-			textArea.setText(paneBuilder.toString().replace("{src}", "file:/" + app.dataPath("").replace("\\", "/") + "/"));
+			textArea.setText(paneBuilder.toString().replace("{$src}", "file://" + app.dataPath("").replace("\\", "/") + "/"));
+			System.out.println(textArea.getText());
 			s.close();
 		} catch (IOException e) {
 			e.printStackTrace();
